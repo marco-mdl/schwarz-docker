@@ -48,7 +48,6 @@ RUN docker-php-ext-enable imagick
 RUN cd /tmp \
     && curl -sS https://getcomposer.org/installer | php \
     && mv composer.phar /usr/local/bin/composer
-RUN composer install
 WORKDIR /var/www
 CMD php-fpm
 
